@@ -1,0 +1,18 @@
+redis:
+  address: "redis:6379"
+  keyprefix: ""
+  username: ""
+  password: ""
+
+awss3config:
+  bucket: "<bucket>"
+  region: "<region>"
+  secretid: "<secretid>"
+  secretkey: "<secretkey>"
+  token: "<token>"
+
+loggerconfig:
+  appname : "case-study-job-service"
+  loglevel : 0
+  logencoding : "json"
+  environmenttype : "production"

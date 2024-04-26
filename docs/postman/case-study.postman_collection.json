@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "37454859-47a8-4227-89f8-34dc0b5909e6",
+		"name": "case-study",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23239958"
+	},
+	"item": [
+		{
+			"name": "api-service",
+			"item": [
+				{
+					"name": "product",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "Y2ltcmktdXNlcm5hbWU=",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "c2NSRlRXNVJvVEFVOENJTHE2VWtrUQ==",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "120"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Succeed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/product/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "120"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "ohWgSnfjzYIgjCSHKfAKKeaAlOQXgUmK"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 11:02:55 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "300"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 120,\n    \"title\": \"title120\",\n    \"price\": 11845.62,\n    \"category\": \"beyaz-esya\",\n    \"brand\": \"arcelik\",\n    \"url\": \"http://site.example.com/?id=120\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel elit tortor. Fusce posuere ante sollicitudin risus tempus, quis accumsan tortor accumsan.\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/product/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "120123123"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Request-Id",
+									"value": "pOsKCSVRKarOSxNIkAjtkOmtuuiwukVQ"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 11:03:34 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/product/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "120"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Www-Authenticate",
+									"value": "basic realm=Restricted"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "wvsOOKdNLFbzZIRtqHtZlSaLopJQCclt"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 11:03:58 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "healtycheck",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "Y2ltcmktdXNlcm5hbWU=",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "c2NSRlRXNVJvVEFVOENJTHE2VWtrUQ==",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/healthcheck",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"healthcheck"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "succeed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/healthcheck",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"healthcheck"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "RoqRvNYDhhnTDHYuQbFvqYxOQCQlqWyt"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 11:02:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "18"
+								}
+							],
+							"cookie": [],
+							"body": "\"program is work\""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/healthcheck",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"healthcheck"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Www-Authenticate",
+									"value": "basic realm=Restricted"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "oHiovGMvXRezFAKqWSAqSOsKrDXyCNwq"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Apr 2024 11:05:06 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

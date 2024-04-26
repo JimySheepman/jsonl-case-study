@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  case-study-api-service:
+    build: ./case-study-api-service/.
+    container_name: "case-study-api-service"
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - REDIS_ADDRESS=redis
+    depends_on:
+      - redis
+
+  case-study-job-service:
+    build: ./case-study-job-service/.
+    container_name: "case-study-job-service"
+    environment:
+      - REDIS_ADDRESS=redis
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    container_name: "redis"
+    command: redis-server --appendonly yes
+    ports:
+      - target: 6379
+        published: 6379
+        protocol: tcp
+        mode: host
+    volumes:
+      - redis_data:/data
+    restart: always
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+volumes:
+  redis_data:
